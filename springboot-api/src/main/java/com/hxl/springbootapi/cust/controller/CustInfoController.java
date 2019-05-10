@@ -4,7 +4,10 @@ import com.hxl.springbootapi.cust.entity.CustInfo;
 import com.hxl.springbootapi.cust.mapper.CustInfoMapper;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.bind.annotation.RestController;
+
+import java.util.UUID;
 
 @RequestMapping("/custInfo")
 @RestController
@@ -17,17 +20,19 @@ public class CustInfoController {
     @RequestMapping("/saveCust")
     public int saveCust(String name){
         CustInfo info = new CustInfo();
-        info.setCustName("12");
-        info.setCustCode("1");
-        custInfoMapper.insert(info);
-        return 1;
+        info.setCustName("test");
+        info.setCustCode(UUID.randomUUID().toString());
+        info.setCustPhone("18090123123");
+//        custInfoMapper.insert(info);
+        return custInfoMapper.insetValue(info);
     }
 
     @RequestMapping("/selectCust")
     public Object selectCust(String custCode){
-
-
-        return null;
+        System.out.println(custCode);
+        CustInfo info = custInfoMapper.getById("2");
+        System.out.println(info.getCustCode());
+        return info;
     }
 
 

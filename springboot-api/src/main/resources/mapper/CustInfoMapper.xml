@@ -21,7 +21,7 @@
 
     <select id="getById" parameterType="java.lang.String" resultType="com.hxl.springbootapi.cust.entity.CustInfo">
 
-        select * from cust_info where cust_name=#{id}
+        select * from cust_info where cust_code=#{id}
 
     </select>
   
