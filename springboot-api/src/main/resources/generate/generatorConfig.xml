@@ -11,7 +11,7 @@
             <property name="suppressAllComments" value="true"/>
         </commentGenerator>
         <!--数据库链接地址账号密码-->
-        <jdbcConnection driverClass="org.sqlite.JDBC" connectionURL="jdbc:sqlite::resource:data/demo.db" userId="" password="">
+        <jdbcConnection driverClass="org.sqlite.JDBC" connectionURL="jdbc:sqlite:src/main/resources/data/demo.db" userId="" password="">
         </jdbcConnection>
         <javaTypeResolver>
             <property name="forceBigDecimals" value="false"/>
