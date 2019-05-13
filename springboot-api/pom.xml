@@ -101,6 +101,11 @@
                             <artifactId>sqlite-jdbc</artifactId>
                             <version>3.8.7</version>
                     </dependency>
+                    <!--<dependency>-->
+                        <!--<groupId>com.hxl</groupId>-->
+                        <!--<artifactId>springboot-utils</artifactId>-->
+                        <!--<version>0.0.1-SNAPSHOT</version>-->
+                    <!--</dependency>-->
 
                 </dependencies>
             </plugin>
